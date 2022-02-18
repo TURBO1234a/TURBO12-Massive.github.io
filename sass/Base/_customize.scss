@@ -1,0 +1,37 @@
+.owl-theme {
+    .owl-dots {
+        .owl-dot {
+            span {
+                height: 12px;
+                width: 12px;
+                background-color: #eaeaea;
+                opacity: 0.5;
+            }
+            &.active {
+                span {
+                    background-color: #eaeaea;
+                    opacity: 1;
+                }
+            }
+            &:hover {
+                span {
+                    background-color: #eaeaea;
+                    opacity: 1;
+                }
+            }
+            &:hover {
+                span {
+                    background-color: #eaeaea;
+                    opacity: 1;
+                }
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+button:focus {
+    outline: none;
+}
+

@@ -1,0 +1,37 @@
+.cover {
+    background-image: url(http://massivemarkup.lab.themebucket.net/assets/img/banner/index-banner-2.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    .cover__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h2 {
+            letter-spacing: $ls-1;
+            @include styleText($color-white-0,$fs-2,$fw-3);
+            line-height: $lh-0;
+            text-align: center;
+            margin: 0px
+        }
+        p{
+            @include styleText($color-white-0,$fs-3,$fw-0);
+            letter-spacing: $ls-2;
+            margin: 0px;
+        }
+    }
+    @include responsive("medium") {
+        .cover__content {
+            h2 {
+                font-size: $fs-4;
+            }
+            p {
+                font-size: $fs-1 + 3;
+            }
+        }
+    }
+}

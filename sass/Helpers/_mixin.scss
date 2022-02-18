@@ -1,0 +1,31 @@
+@mixin  styleText($color,$font-size,$font-weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+@mixin styleButton ($color,$fs,$bg-color,$py,$px) {
+    background-color: $bg-color;
+    padding: $py $px;
+    font-size: $fs;
+    color: $color;
+    cursor: pointer;
+    border: none;
+}
+@mixin hoverButton($color, $bg-color) {
+    &:hover {
+
+        color: $color;
+        background-color: $bg-color;
+    }
+}
+@mixin responsive($screen) {
+    @if map-has-key($map:$breakpoints , $key:$screen ) {
+        $value: map-get($map: $breakpoints, $key:$screen );
+        @media screen and (max-width:$value) {
+            @content; // Tự động Điền  nội dung trong hàm được gọi vào vị trí này
+        }
+    }
+    @else {
+        @warn "`{$screen}` isn't valid";
+    }
+}

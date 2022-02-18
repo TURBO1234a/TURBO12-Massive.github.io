@@ -1,0 +1,86 @@
+.info {
+    background-image: url(http://massivemarkup.lab.themebucket.net/assets/img/pattern-2.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    .info__content {
+        .nav-item {
+            position: relative;
+            .nav-link {
+                transition: all 0.5s;
+                background-color: $color-trans-0;
+                margin-right: $mg-0;
+                &.active {
+                    background-color: white;
+                }
+                border-radius: 0;
+                text-decoration: none;
+                padding: 35px 70px;
+
+                i {
+                    font-size: $fs-4 + 6;
+                    color: $color-black-4;
+                }
+                &.active::after {
+                    opacity: 1;
+                }
+                &:hover::after {
+                    opacity: 1;
+                }
+                &::after {
+                    transition: all 0.5s;
+                    position: absolute;
+                    content: "";
+                    bottom: -20px;
+                    left: 50%;
+                    display: block;
+                    border-style: solid;
+                    border-color: transparent;
+                    border-width: 10px;
+                    border-top: 10px solid white;
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+        .info__detail {
+            h3 {
+                letter-spacing: 2px;
+                @include styleText($color-gray-0, $fs-0 + 1, $fw-0);
+            }
+            h2 {
+                letter-spacing: 2px;
+                @include styleText($color-black-2, $fs-4, $fw-0);
+            }
+            p {
+                @include styleText($color-black-0, $fs-0 + 2, $fw-0);
+                line-height: $lh-2 + 5;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .info__content {
+            .info__nav {
+                display: flex;
+
+                .nav-item {
+                    margin-bottom: 10px;
+                    width: 100%;
+                    text-align: center;
+                    .nav-link {
+                        margin-right: 0px;
+                    }
+                }
+            }
+            padding: 0px 30px;
+            .info__detail {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.banner {
+    .banner__content {
+        .banner__top {
+            margin-bottom: $mg-4;
+            h2 {
+                position: relative;
+                margin-bottom: $mg-0;
+                padding-bottom: $pd-1 - 2;
+                letter-spacing: $ls-3;
+                @include styleText($color-black-2, $fs-3 + 4, $fw-0);
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                @include styleText($color-gray-0, $fs-1, $fw-4);
+                line-height: $lh-2;
+                width: 67%;
+                margin: 0px auto;
+            }
+        }
+        .banner__bottom {
+            .banner__item {
+                position: relative;
+                &:hover .banner__overlay {
+                    opacity: 1;
+                }
+                img {
+                    width: 100%;
+                }
+                .banner__overlay {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.5s;
+                    opacity: 0;
+                    border: 20px solid $color-black-6;
+                    background-color: $color-white-2;
+                    .banner__detail {
+                        i {
+                            font-size: 35px;
+                            color: $color-black-4;
+                            cursor: pointer;
+                            opacity: 0;
+                            transition: all .3s;
+                        }
+                        h3 {
+                            @include styleText($color-black-4, $fs-0 + 1, $fw-0);
+                            letter-spacing: $ls-1 - 1;
+                            margin-top: $mg-3;
+                            cursor: pointer;
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $color-organ-0;
+                            }
+                        }
+                        a {
+                            text-decoration: none;
+                            margin-bottom: 0px;
+                            @include styleText($color-gray-3, $fs-0 - 1, $fw-0);
+                            letter-spacing: $ls-1 - 1;
+                            line-height: $lh-2 + 5;
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $color-organ-0;
+                            }
+                        }
+                        .banner__des {
+                            opacity: 1;
+                            transition: all .3s;
+                            transform: translateY(40px);
+                            a {
+                                @include styleText($color-black-4, $fs-0 + 1, $fw-0);
+                            letter-spacing: $ls-1 - 1;
+                            margin-top: $mg-3;
+                            cursor: pointer;
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $color-organ-0;
+                            }
+                            }
+                        }
+                    }
+                    &:hover .banner__des{
+                        transform: translateY(15px);
+                        opacity: 1;
+                    }
+                    &:hover i {
+                        transform: translateY(10px);
+                        opacity: 1;
+                    }
+                }
+                .modal-content {
+                    background-color: transparent;
+                    border: none;
+                    z-index: 10;
+                    .modal-body {
+                        img {
+                            height: 600px;
+                            width: auto;
+                        }
+                    }
+                }
+                @media screen and(min-width:575.98px) {
+                    .modal-dialog {
+                        max-width: 800px;
+                    }
+                }
+                .modal {
+                    .modal-overlay {
+                        background-color: $color-dark-0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0.8;
+                        position: fixed;
+                        pointer-events: none;
+                    }
+                }
+            }
+            .nav-item {
+                .nav-link {
+                    @include styleText($color-gray-4,$fs-0 + 1,$fw-0);
+                    margin: 0px $mg-0 - 5;
+                    padding: 0px;
+                    letter-spacing: $ls-3 + 1;
+                    transition: all .5s;
+                    &.active {
+                        background-color: transparent;
+                        color: $color-black-4;
+                    }
+                    &:hover {
+                        color: $color-black-4;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .banner__content {
+            .banner__top {
+                h2 {
+                    font-size: $fs-1 + 3;
+                }
+                p {
+                    font-size: $fs-1;
+                    width: 85%;
+                }
+            }
+            .banner__bottom {
+                .nav-item {
+                    .nav-link {
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

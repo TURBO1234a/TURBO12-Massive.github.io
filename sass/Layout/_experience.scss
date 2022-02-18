@@ -1,0 +1,67 @@
+.experience {
+    background-image: url(http://massivemarkup.lab.themebucket.net/assets/img/parallax/4.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    .experience__content {
+        .experience__item {
+            color: $color-white-0;
+            h2 {
+                @include styleText($color-white-0, $fs-3 + 4, $fw-0);
+                letter-spacing: $ls-2;
+            }
+            h3 {
+                margin-bottom: $mg-3;
+                @include styleText($color-white-0, $fs-3 - 2, $fw-0);
+            }
+            p {
+                margin-bottom: $mg-3;
+                line-height: $lh-2 + 5;
+            }
+        }
+        .experience__intro {
+            position: relative;
+            z-index: 2;
+
+        }
+    }
+    .experience__overlay {
+        width: 50%;
+        height: 100%;
+        background-color: $color-black-5;
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    @include responsive("large") {
+        .experience__content {
+            .experience__item {
+                width: 100%;
+                
+            }
+            .resize__exper {
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+            }
+        }
+    }
+    @media screen and (max-width:800px) {
+        .experience__overlay {
+            display: none;
+        }
+        .experience__content {
+            .experience__item {
+                h2 {
+                    padding-bottom: $pd-0;
+                    font-size: $fs-1 + 3;
+                }
+            }
+        }
+    }
+}

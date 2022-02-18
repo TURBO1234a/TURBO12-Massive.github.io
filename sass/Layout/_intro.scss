@@ -1,0 +1,80 @@
+.intro {
+    .intro__content {
+        .intro__top {
+            margin-bottom: $mg-2;
+            h2 {
+                position: relative;
+                margin-bottom: $mg-0;
+                padding-bottom: $pd-1 - 2;
+                letter-spacing: $ls-3;
+                @include styleText($color-black-2, $fs-3 + 4, $fw-0);
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                @include styleText($color-gray-0, $fs-1, $fw-4);
+                line-height: $lh-2;
+                width: 60%;
+                margin: 0px auto;
+            }
+        }
+        .intro__bottom {
+            .intro__item {
+                position: relative;
+                padding: $pd-0;
+                border: 1px solid $color-white-1;
+                border-radius: $br-0;
+                &:hover .intro__icon {
+                    background-color: $color-organ-0;
+                }
+                .intro__detail {
+                    padding-top: 20px;
+                    h3 {
+                        margin-bottom: $mg-0;
+                        letter-spacing: $ls-3 - 1;
+                        @include styleText($color-black-2,$fs-3 - 2,$fw-0);
+                    }
+                    p {
+                        @include styleText($color-gray-0,$fs-1,$fw-0);
+                    }
+                }
+                .intro__icon {
+                    position: absolute;
+                    top:-31px;
+                    left: 31px;
+                    height: 60px;
+                    box-shadow: 0 0 0 10px $color-white-0;
+                    width: 60px;
+                    border-radius: $br-0;
+                    background-color: $color-black-4;
+                    text-align: center;
+                    transition: all .5s;
+                    i {
+                        line-height: $fs-2;
+                        font-size: $fs-4;
+                        color: $color-white-0;
+                    }
+                }
+            }
+            
+        }
+        @include responsive("medium") {
+            .intro__top {
+                h2 {
+                    font-size: $fs-1 + 3;
+                }
+                p{
+                    font-size: $fs-1;
+                    width: 80%;
+                }
+            }
+        }
+        @media screen and (max-width:800px) {
+            .intro__bottom {
+                .intro__resize {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+header {
+    // background-color: $color-black-1;
+    transition: all .3s;
+    position: fixed;
+    background: transparent;
+    z-index: 10;
+    width: 100%;
+    .header__content {
+        // height: 100px;
+        padding: 0px $pd-0;
+        .navbar-brand {
+            img {
+                transition: all .3s;
+                height: 96px;
+            }
+        }
+        .navbar-collapse {
+            flex-grow: 0;
+        }
+        .nav-item {
+           
+
+            padding: 0px;
+            margin-left: 2px;
+            &.active {
+                .nav-link {
+                    
+                    color: $color-organ-0; 
+                }
+            }
+            .nav-link {
+                transition: all .5s;
+                padding: 0px $pd-1 ;
+                @include styleText($color-white-0, $fs-0, $fw-0);
+                white-space: nowrap;
+            }
+            &:hover .nav-link {
+                color: $color-organ-0;
+            }
+        }
+    }
+    @media screen and (max-width:1050px) {
+        .navbar__content {
+            flex-wrap: wrap;
+            .navbar__list {
+                width: 100%;
+                .navbar-nav {
+                    margin-left: auto;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        
+    }
+    @media screen and(max-width:767.87px) {
+        .navbar__content {
+            .navbar__list {
+                height: 400px;
+                overflow: scroll;
+                .navbar-nav {
+                  height: auto !important;
+                  background-color: white;
+                    flex-wrap:nowrap;
+                    .nav-item {
+                        border-bottom: solid 1px #f0f0f0;
+                        position: relative;
+                        padding: 12px 20px;
+                        width: 100%;
+                        &.slash__header {
+                            display: none
+                        };
+                        .nav-link {
+                            padding-left: 0px;
+                            color: $color-black-2;
+                            &:hover {
+                                color: $color-organ-0;
+                            }
+                            span {
+                                padding-left: 25px;
+                                width:40px;
+                                position: absolute;
+                                line-height: 43px;
+                                right: 22px;
+                                top:0px;
+                                font-size: 22px;
+                                border-left: solid 1px #f5f5f5;
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar-brand {
+                img {
+                    height: 50px !important;
+                }
+            }
+        }
+    }
+    @media screen and (max) {
+        
+    }
+}

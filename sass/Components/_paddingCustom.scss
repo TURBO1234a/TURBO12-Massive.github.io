@@ -1,0 +1,8 @@
+.paddingCus {
+    padding: $pd-2 0px;
+}
+@include responsive("medium") {
+    .paddingCus {
+        padding: 50px 0px;
+    }
+}

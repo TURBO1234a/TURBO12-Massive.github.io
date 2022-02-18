@@ -1,0 +1,12 @@
+.line {
+    position: relative;
+    &::after {
+        content: "";
+        height: 2px;
+        width: 60px;
+        background-color: $color-black-3;
+        position: absolute;
+        bottom: -5px;
+        left: 47%;
+    }
+}

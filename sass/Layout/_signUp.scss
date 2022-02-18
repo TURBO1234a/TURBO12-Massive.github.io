@@ -1,0 +1,32 @@
+.signUp {
+    background-image: url(	http://massivemarkup.lab.themebucket.net/assets/img/parallax/8.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 150px 0px;
+    .signUp__content {
+        h4 {
+            @include styleText($color-organ-0,$fs-1 + 1,$fw-0);
+            letter-spacing: 3px;
+        }
+        h3 {
+            @include styleText($color-white-0,$fs-4 + 6,$fw-4);
+            letter-spacing: 2px;
+            line-height: $lh-1;
+        }
+        
+    }
+    @include responsive("medium") {
+        .signUp__content {
+            h3 {
+                font-size: 26px;
+            }
+            button {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

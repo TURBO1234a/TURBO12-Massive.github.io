@@ -1,0 +1,56 @@
+#button {
+    display: inline-block;
+    border: none;
+    background-color: $color-black-5;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    &:hover {
+      i {
+        color: $color-black-0;
+      }
+    }
+    i {
+      color: $color-white-0;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px !important;
+      padding-right: 10px;
+    }
+  }
+  #button:hover::after {
+      color: $color-black-0;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: $color-organ-0;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  a:hover{
+      text-decoration: none;
+  }
+  .cd-top--is-visible { // back-to-top button visible
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .cd-top--fade-out { // reduce button opacity if user keeps scrolling
+    opacity: 1;
+  }
+  
+  
